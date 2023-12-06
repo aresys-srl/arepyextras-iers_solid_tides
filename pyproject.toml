@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arepyextras-iers_solid_tides"
+description = "ArePyExtras IERS Solid Tides is the Aresys Python module for estimating solid earth tides."
+authors = [{ name = "Aresys S.R.L.", email = "info@aresys.it" }]
+license = { text = "MIT" }
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">= 3.9"
+dependencies = ["numpy >= 1.20", "pandas >= 1.4.0"]
+dynamic = ["version"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.setuptools]
+license-files = ["LICENSE.txt"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["tests", "tests*"]
+namespaces = true
+
+[tool.setuptools.dynamic]
+version = { attr = "arepyextras.iers_solid_tides.__version__" }
