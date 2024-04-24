@@ -5,4 +5,3 @@
 IERS solid tides package, pre-compiled libraries wrapper submodule
 ------------------------------------------------------------------
 """
-# the --- below the docstring title are needed for autodoc generation by sphinx module

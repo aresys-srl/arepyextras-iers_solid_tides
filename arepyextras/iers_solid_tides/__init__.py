@@ -12,12 +12,9 @@ from pathlib import Path
 
 from pkg_resources import resource_filename
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # Get the extension for the library, depending on which OS we're on
 LIB_EXT = ".dll" if platform.system() == "Windows" else ".so"
 
-# solid_earth_tide_lib_path = Path(pkgutil.get_loader(__name__).get_filename()).parent.joinpath(
-#     "resources", "solid" + LIB_EXT
-# )
 solid_earth_tide_lib_path = resource_filename("arepyextras.iers_solid_tides.resources", "solid" + LIB_EXT)
