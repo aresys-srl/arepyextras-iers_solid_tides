@@ -13,8 +13,29 @@ The package can be installed via pip:
 pip install arepyextras-iers_solid_tides
 ```
 
-or via conda:
+> [!NOTE]  
+> The SOLID precompiled libraries ``.so/.dll`` are included in this package. Nevertheless, source code for the Fortran SOLID program has been included and can be found at `arepyextras-iers_solid_tides\source`. This can be compiled following the instructions below on any platform.
 
-```shell
-conda install arepyextras-iers_solid_tides
+## SOLID source code building instructions
+
+### Prerequisites
+
+- C, C++ and Fortran compilers
+- CMake >= 3.14
+
+### Build and pack steps
+
+From the project root folder:
+
+```bash
+mkdir _build && cd _build
+cmake -D CMAKE_BUILD_TYPE=Release ..
+cmake --build .
+cpack -G TGZ -D CPACK_COMPONENTS_ALL=Runtime -D CPACK_PACKAGE_FILE_NAME="solidtools-dynamic-release"
+tar -xzvf solidtools-dynamic-release-Runtime.tar.gz
 ```
+
+The compiled shared library is available under
+`./solidtools-dynamic-release/lib`
+
+Decompress the archive to access the compiled library ``.dll/.so`` and copy the file to the `arepyextras-iers_solid_tides/arepyextras/iers_solid_tides/resources` path, replacing the older file.

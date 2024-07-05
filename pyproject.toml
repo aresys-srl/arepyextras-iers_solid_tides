@@ -19,7 +19,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
 ]
 requires-python = ">= 3.9"
-dependencies = ["numpy >= 1.20", "pandas >= 1.4.0", "setuptools"]
+dependencies = ["numpy<2", "pandas >= 1.4.0", "setuptools"]
 dynamic = ["version"]
 
 [project.optional-dependencies]

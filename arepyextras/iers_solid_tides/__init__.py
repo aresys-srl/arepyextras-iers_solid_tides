@@ -12,7 +12,7 @@ from pathlib import Path
 
 from pkg_resources import resource_filename
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 # Get the extension for the library, depending on which OS we're on
 LIB_EXT = ".dll" if platform.system() == "Windows" else ".so"
