@@ -29,7 +29,7 @@ From the project root folder:
 
 ```bash
 mkdir _build && cd _build
-cmake -D CMAKE_BUILD_TYPE=Release ..
+cmake -D CMAKE_BUILD_TYPE=Release ../source
 cmake --build .
 cpack -G TGZ -D CPACK_COMPONENTS_ALL=Runtime -D CPACK_PACKAGE_FILE_NAME="solidtools-dynamic-release"
 tar -xzvf solidtools-dynamic-release-Runtime.tar.gz
