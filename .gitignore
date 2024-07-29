@@ -2,3 +2,6 @@ __pycache__/
 .vscode
 docs/make.bat
 docs/Makefile
+
+*.egg-info/
+.coverage
